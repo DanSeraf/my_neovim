@@ -21,6 +21,12 @@ Plug 'fsharp/vim-fsharp', {
       \ 'for': 'fsharp',
       \ 'do':  'make fsautocomplete',
       \}
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
+" async completion
+Plug 'Shougo/deoplete.nvim'
+" denite features
+Plug 'Shougo/denite.nvim'
 
 call plug#end()
 
@@ -30,8 +36,12 @@ let g:lightline = {
     \}
 
 " Seoul theme settings
-let g:seoul256_background = 236
+let g:seoul256_srgb = 1
+let g:seoul256_background = 234
 colo seoul256
 
+" enable deoplete at startup
+let g:deoplete#enable_at_startup = 1
+
 "Keymap for NERDtree
-map <C-n> :NERDTreeToggle<CR>
+map <C-up> :NERDTreeToggle<CR>
